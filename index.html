@@ -284,7 +284,7 @@
       const password = document.getElementById("loginPassword").value;
       const user = JSON.parse(localStorage.getItem("registeredUser"));
       if (!user || user.email !== email || user.password !== password) {
-        alert("Incorrect credentials.");
+        alert("Incorrect Login.");
         return false;
       }
       localStorage.setItem("loggedInUser", email);
