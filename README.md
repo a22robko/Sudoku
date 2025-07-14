@@ -22,7 +22,6 @@ När användaren klickar på länken Sign In i toppmenyn, används Cypress-komma
   <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
 </div>
 
-/
 ### ⚠️ Test av felaktig inloggning med alert och formulärinlämning
 
 Det här testet kontrollerar att ett `alert`-meddelande visas när en användare försöker logga in med felaktiga uppgifter.  
@@ -41,7 +40,13 @@ Formuläret skickas direkt med `.submit()`, utan att klicka på en knapp – vil
 
 <br/>
 
-
+Det här testet kontrollerar vad som händer när en användare försöker logga in med ogiltiga uppgifter – och hur formuläret hanteras därefter. cy.contains('Log In') hittar knappen med texten "Log In"
+.click() klickar på knappen så inloggningsformuläret visas
+cy.get('#loginEmail') och .type('fel@mejl.se') fyller i ett ogiltigt användarnamn
+Samma sak görs med lösenord (#loginPassword)
+cy.get('#login form').submit() skickar formuläret direkt – utan att klicka på knappen
+Ett alert-meddelande triggas, som testas med cy.on('window:alert', ...). E-postfältet töms med .clear()
+Ett nytt försök görs med en giltig e-post: a22robko@student.his.se
 <div align="center">
   <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
 </div>
