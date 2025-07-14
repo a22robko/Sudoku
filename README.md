@@ -22,19 +22,7 @@ När användaren klickar på länken Sign In i toppmenyn, används Cypress-komma
   <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
 </div>
 
-// Testar felaktig inloggning
-cy.contains('Log In').click();
-cy.get('#loginEmail').type('fel@mejl.se');
-cy.get('#loginPassword').type('felkod');
-
-cy.on('window:alert', (msg) => {
-  expect(msg).to.include('Incorrect Login');
-});
-
-cy.get('#login form').submit();
-js
-Copy
-Edit
+/
 ### ⚠️ Test av felaktig inloggning med alert och formulärinlämning
 
 Det här testet kontrollerar att ett `alert`-meddelande visas när en användare försöker logga in med felaktiga uppgifter.  
