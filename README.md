@@ -44,7 +44,7 @@ Formuläret skickas direkt med `.submit()`, utan att klicka på en knapp – vil
 
 <div align="center">
   <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" />
-</div>-1d27b0bfc0ee" /> </div>
+ </div>
 
 
 <div align="center">
