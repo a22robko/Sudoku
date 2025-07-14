@@ -43,4 +43,7 @@ cy.get('#facit').should('have.class', 'active');
 <div align="center">
 <img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
 </div>
+
+<div align="center">
 <img width="763" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" />
+</div>
