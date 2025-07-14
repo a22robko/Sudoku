@@ -1,11 +1,11 @@
-# 🔍 Automatiserade tester av min Sudoku-applikation
+# Automatiserade tester av min Sudoku-applikation
 
 Det här projektet visar hur jag testat en webbaserad Sudoku webbsida med Cypress  
 🔗 Live: [https://a22robko.github.io/Sudoku/](https://a22robko.github.io/Sudoku/)
 
 ---
 
-## ✅ Vad som testas
+## Vad som testas
 
 - Felaktig registrering där ogiltig e-post gör input-fältet rött  
 - Felaktig inloggning triggar ett alert-meddelande med texten *Incorrect Login*  
@@ -20,7 +20,7 @@ cy.on('window:alert') lyssnar på felmeddelandet som ska visas – "Incorrect Lo
 
 <br/>
 
-### ❌ Felaktig inloggning
+### Felaktig inloggning
 
 Det första testet kontrollerar hur sidan hanterar inloggning med ogiltiga uppgifter.  
 Cypress använder `.get()` och `.type()` för att fylla i formuläret, och `.submit()` för att skicka det.  
@@ -31,7 +31,7 @@ Cypress använder `.get()` och `.type()` för att fylla i formuläret, och `.sub
 
 <br/>
 
-### ✅ Korrekt inloggning via localStorage
+### Korrekt inloggning via localStorage
 
 För att simulera en lyckad inloggning används `cy.window().then(...)` för att skriva användardata till `localStorage` via `setItem()` och `JSON.stringify()`. Därefter används `cy.reload()` för att ladda om sidan så att användaren automatiskt loggas in.
 '
@@ -43,7 +43,7 @@ För att simulera en lyckad inloggning används `cy.window().then(...)` för att
 <br/>
 
 
-### ⚠️ Test av felaktig inloggning med alert och formulärinlämning
+### Test av felaktig inloggning med alert och formulärinlämning
 Det här testet kontrollerar att ett `alert`-meddelande visas när en användare försöker logga in med felaktiga uppgifter. Cypress lyssnar på `window:alert` och kontrollerar att meddelandet innehåller exakt texten `Incorrect Login`. Formuläret skickas direkt med `.submit()` utan att klicka på någon knapp.
 
 <div align="center"> <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" /> </div>
@@ -59,7 +59,7 @@ Detta visar att du kan hantera alert-dialoger och verifiera meddelanden som visa
 
 <br/>
 
-### 🔄 Navigering och interaktion
+### Navigering och interaktion
 
 Testet använder `cy.contains('Sign In').click()` för att öppna inloggningsrutan.
 Formulärfälten fylls i med `cy.get('#loginEmail').type(...)` och `cy.get('#loginPassword').type(...)`, och skickas sedan med `.submit()` istället för att klicka på en knapp.
