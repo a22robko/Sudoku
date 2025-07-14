@@ -48,12 +48,15 @@ Det här testet kontrollerar att ett alert-meddelande visas när en användare f
 Cypress lyssnar på window:alert och kontrollerar att meddelandet innehåller exakt texten "Incorrect Login". Formuläret skickas direkt med `.submit()` – utan att klicka på någon knapp.
 
 <div align="center"> <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" /> </div>
+
+###🧪 Sign in sidan 
+
 `cy.on('window:alert', (msg) => { ... })` lyssnar efter om ett alert-meddelande visas.
 `expect(msg).to.include('Incorrect Login')` kontrollerar att meddelandet innehåller exakt texten "Incorrect Login".
 `cy.get('#login form').submit()` skickar formuläret direkt – utan att behöva klicka på en knapp.
 Detta visar att du kan hantera alert-dialoger och verifiera meddelanden som visas när användaren gör något fel.
 
-<div align="center"> <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" /> </div> <br/>
+<div align="center"> <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" /> </div>
 
 <br/>
 🔄 Navigering och interaktion
