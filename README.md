@@ -52,15 +52,5 @@ Ett nytt försök görs med en giltig e-post: a22robko@student.his.se
   <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
 </div>
 
-// Testar att spela Sudoku och visa facit
-cy.get('[onclick="navigate(\'sudoku\')"]').click();
-cy.get('#sudoku').should('have.class', 'active');
-
-cy.get('input.sudoku-cell:not(.prefilled):not([disabled])').eq(0).click().type('4');
-cy.contains('Facit').click();
-cy.get('#facit').should('have.class', 'active');
-
-
-
 
 
