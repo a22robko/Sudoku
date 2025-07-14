@@ -28,14 +28,6 @@ cy.get('#login form').submit();
 js
 Copy
 Edit
-
-
-<div align="center">
-  <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" />
-</div>
-
-<br/>
-
 ### ⚠️ Test av felaktig inloggning med alert och formulärinlämning
 
 Det här testet kontrollerar att ett `alert`-meddelande visas när en användare försöker logga in med felaktiga uppgifter.  
@@ -46,6 +38,15 @@ Formuläret skickas direkt med `.submit()`, utan att klicka på en knapp – vil
 <div align="center">
   <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" />
 </div>-1d27b0bfc0ee" /> </div>
+
+
+<div align="center">
+  <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" />
+</div>
+
+<br/>
+
+
 <div align="center">
   <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
 </div>
