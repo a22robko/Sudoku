@@ -55,13 +55,15 @@ expect(msg).to.include('Incorrect Login') kontrollerar att meddelandet innehåll
 
 <br/>
 
-Det här testet kontrollerar vad som händer när en användare försöker logga in med ogiltiga uppgifter – och hur formuläret hanteras därefter. cy.contains('Log In') hittar knappen med texten "Log In"
-.click() klickar på knappen så inloggningsformuläret visas
-cy.get('#loginEmail') och .type('fel@mejl.se') fyller i ett ogiltigt användarnamn
-Samma sak görs med lösenord (#loginPassword)
-cy.get('#login form').submit() skickar formuläret direkt – utan att klicka på knappen
-Ett alert-meddelande triggas, som testas med cy.on('window:alert', ...). E-postfältet töms med .clear()
-Ett nytt försök görs med en giltig e-post: a22robko@student.his.se
+### 🔄 Navigering och interaktion
+
+- `cy.contains('Sign In')` + `.click()` visar inloggningsrutan  
+- `cy.get('#loginEmail').type(...)` + `#loginPassword` fyller i formuläret  
+- `.submit()` skickar formuläret  
+- `.clear()` används för att tömma ett fält  
+- När spelet visas, testas interaktion med `.click().type('4')` i spelrutorna  
+- Klick på “Facit” testas med `.contains('Facit').click()`  
+- Alla sidbyten testas via `.click()` på länkar  
 <div align="center">
   <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
 </div>
