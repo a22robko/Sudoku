@@ -8,18 +8,16 @@ Both the website and all Cypress tests are fully published to GitHub.
 
 ---
 
-## Vad som testas
 
-- Felaktig registrering där ogiltig e-post gör input-fältet rött  
-- Felaktig inloggning triggar ett alert-meddelande med texten *Incorrect Login*  
-- Korrekt inloggning ger tillgång till spelet  
-- Det går att fylla i siffror i spelets tomma rutor  
-- Facit-knappen visar rätt lösning och byter sektion  
-- Navigering mellan sidor fungerar  
-- Utloggning återställer sidan och visar *To play Sudoku, sign in*
-Testet börjar med att kontrollera hur sidan hanterar felaktig inloggning.
-Cypress använder cy.get() och .type() för att fylla i felaktiga uppgifter i formuläret, och .submit() för att skicka formuläret.
-cy.on('window:alert') lyssnar på felmeddelandet som ska visas – "Incorrect Login" – om något är fel.
+### What’s Being Tested
+
+- Invalid registration highlights the input field red if the email is invalid  
+- Incorrect login triggers a browser alert with the message `"Incorrect Login"`  
+- Correct login gives access to the Sudoku game  
+- Users can click and type numbers into the Sudoku grid  
+- The **"Facit" button** shows the correct solution  
+- Navigation between pages (Home, Sign In, Game, etc.) is fully tested  
+- Logging out resets the app and shows *"To play Sudoku, sign in"*
 
 <br/>
 
