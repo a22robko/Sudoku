@@ -1,7 +1,10 @@
-# Automatiserade tester av min Sudoku-applikation
+### Automated Testing of a Sudoku Web Application
 
-Det här projektet visar hur jag testat en webbaserad Sudoku webbsida med Cypress  
-Live: [https://a22robko.github.io/Sudoku/](https://a22robko.github.io/Sudoku/)
+This project demonstrates how I tested a fully functional **Sudoku web application** using **Cypress** and **Node.js**.  
+The app includes features such as **Sign Up**, **Log In**, **Log Out**, and a **Solution ("Facit") button** that displays the correct Sudoku answers.
+
+Both the website and all Cypress tests are fully published to GitHub.  
+🔗 **Live website:** [https://a22robko.github.io/Sudoku/](https://a22robko.github.io/Sudoku/)
 
 ---
 
