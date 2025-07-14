@@ -7,6 +7,11 @@ Both the website and all Cypress tests are fully published to GitHub.
 🔗 **Live website:** [https://a22robko.github.io/Sudoku/](https://a22robko.github.io/Sudoku/)
 
 ---
+### Tools Used
+
+-  The Sudoku website is built using plain **HTML, CSS, and JavaScript**
+-  All tests are written in **JavaScript using Cypress**
+-  **Node.js** is only used to run Cypress locally (test runner environment)
 
 
 ### What’s Being Tested
@@ -21,7 +26,7 @@ Both the website and all Cypress tests are fully published to GitHub.
 
 <br/>
 
-### ❌ Invalid Login Test
+### Invalid Login Test
 
 This test checks how the app handles login attempts with incorrect credentials.  
 Cypress uses `.get()` and `.type()` to enter input, and `.submit()` to send the form.  
@@ -45,7 +50,7 @@ Then, `cy.reload()` is called to reload the page and automatically log the user 
 <br/>
 
 
-### ⚠️ Invalid Login with Alert and Form Submission
+### Invalid Login with Alert and Form Submission
 
 This test verifies that an `alert` message appears when a user attempts to log in with incorrect credentials.  
 Cypress listens to the `window:alert` event and checks that the message contains the exact text `"Incorrect Login"`.  
@@ -53,7 +58,7 @@ The form is submitted directly using `.submit()` without clicking any button.
 
 <div align="center"> <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" /> </div>
 
-### 🔐 Sign In Form Behavior
+### Sign In Form Behavior
 
 `cy.on('window:alert', (msg) => { ... })` listens for any alert messages triggered by the browser.  
 `expect(msg).to.include('Incorrect Login')` verifies that the alert contains the exact message `"Incorrect Login"`.  
@@ -65,7 +70,7 @@ This test demonstrates how Cypress can handle alert dialogs and validate error m
 
 <br/>
 
-### 🎯 Navigation and Game Interaction
+### Navigation and Game Interaction
 
 The test uses `cy.contains('Sign In').click()` to open the login form.  
 The form fields are filled in using `cy.get('#loginEmail').type(...)` and `cy.get('#loginPassword').type(...)`, and submitted with `.submit()` instead of clicking a button.  
