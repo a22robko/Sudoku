@@ -19,6 +19,7 @@ Cypress använder cy.get() och .type() för att fylla i felaktiga uppgifter i fo
 cy.on('window:alert') lyssnar på felmeddelandet som ska visas – "Incorrect Login" – om något är fel.
 
 <br/>
+
 ### ❌ Felaktig inloggning
 
 Det första testet kontrollerar hur sidan hanterar inloggning med ogiltiga uppgifter.  
