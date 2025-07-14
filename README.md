@@ -54,14 +54,10 @@ expect(msg).to.include('Incorrect Login') kontrollerar att meddelandet innehåll
 
 <br/>
 
-### 🔄 Navigering och interaktion
+🔄 Navigering och interaktion
+Testet använder cy.contains('Sign In').click() för att öppna inloggningsrutan. Formulärfälten fylls i med cy.get('#loginEmail').type(...) och cy.get('#loginPassword'), och skickas sedan med .submit() istället för att klicka på en knapp. Metoden .clear() används för att tömma fält innan ny data skrivs in.
 
-- `cy.contains('Sign In')` + `.click()` visar inloggningsrutan  
-- `cy.get('#loginEmail').type(...)` + `#loginPassword` fyller i formuläret  
-- `.submit()` skickar formuläret  
-- `.clear()` används för att tömma ett fält  
-- När spelet visas, testas interaktion med `.click().type('4')` i spelrutorna  
-- Klick på “Facit” testas med `.contains('Facit').click()`  
+När spelet visas testas interaktionen genom att klicka och skriva siffror i rutorna med .click().type('4'). Klick på knappen “Facit” verifieras med cy.contains('Facit').click(). Alla sidbyten testas genom att klicka på länkar med .click() för att kontrollera navigationen mellan sektionerna.`  
 - Alla sidbyten testas via `.click()` på länkar  
 <div align="center">
   <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
