@@ -18,6 +18,7 @@ Testet börjar med att kontrollera hur sidan hanterar felaktig inloggning.
 Cypress använder cy.get() och .type() för att fylla i felaktiga uppgifter i formuläret, och .submit() för att skicka formuläret.
 cy.on('window:alert') lyssnar på felmeddelandet som ska visas – "Incorrect Login" – om något är fel.
 
+<br/>
 ### ❌ Felaktig inloggning
 
 Det första testet kontrollerar hur sidan hanterar inloggning med ogiltiga uppgifter.  
@@ -27,6 +28,7 @@ Cypress använder `.get()` och `.type()` för att fylla i formuläret, och `.sub
 <img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
 </div>
 
+<br/>
 
 ### ✅ Korrekt inloggning via localStorage
 
@@ -37,12 +39,11 @@ Därefter används `cy.reload()` för att ladda om sidan så att användaren aut
 </div>
 
 
+<br/>
 
 ⚠️ Test av felaktig inloggning med alert och formulärinlämning
 Det här testet kontrollerar att ett alert-meddelande visas när en användare försöker logga in med felaktiga uppgifter.
-Cypress lyssnar på window:alert och kontrollerar att meddelandet innehåller exakt texten "Incorrect Login".
-
-Formuläret skickas direkt med `.submit()` – utan att klicka på någon knapp.
+Cypress lyssnar på window:alert och kontrollerar att meddelandet innehåller exakt texten "Incorrect Login". Formuläret skickas direkt med `.submit()` – utan att klicka på någon knapp.
 
 <div align="center"> <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" /> </div>
 `cy.on('window:alert', (msg) => { ... })` lyssnar efter om ett alert-meddelande visas.
