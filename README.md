@@ -35,6 +35,7 @@ Cypress använder `.get()` och `.type()` för att fylla i formuläret, och `.sub
 
 För att simulera en lyckad inloggning används `cy.window().then(...)` för att skriva användardata till `localStorage` via `setItem()` och `JSON.stringify()`.  
 Därefter används `cy.reload()` för att ladda om sidan så att användaren automatiskt loggas in.
+'
 <div align="center">
   <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
 </div>
