@@ -21,11 +21,11 @@ Both the website and all Cypress tests are fully published to GitHub.
 
 <br/>
 
-### Felaktig inloggning
+### ❌ Invalid Login Test
 
-Det första testet kontrollerar hur sidan hanterar inloggning med ogiltiga uppgifter.  
-Cypress använder `.get()` och `.type()` för att fylla i formuläret, och `.submit()` för att skicka det.  
-`cy.on('window:alert')` lyssnar efter ett felmeddelande som innehåller texten `"Incorrect Login"`..
+This test checks how the app handles login attempts with incorrect credentials.  
+Cypress uses `.get()` and `.type()` to enter input, and `.submit()` to send the form.  
+`cy.on('window:alert')` listens for an alert with the message `"Incorrect Login"`.
 <div align="center">
 <img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
 </div>
