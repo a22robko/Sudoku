@@ -7,6 +7,9 @@
 ✅ Facit-knapp visar korrekt sektion  
 ✅ Navigation mellan sektioner fungerar  
 ✅ Utloggning återställer till "To play Sudoku, sign in"
+<div align="center">
+  <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
+</div>
 
 // Testar felaktig inloggning
 cy.contains('Log In').click();
@@ -34,9 +37,6 @@ cy.get('input.sudoku-cell:not(.prefilled):not([disabled])').eq(0).click().type('
 cy.contains('Facit').click();
 cy.get('#facit').should('have.class', 'active');
 
-<div align="center">
-  <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
-</div>
 
 <div align="center">
   <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" />
