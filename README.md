@@ -8,6 +8,10 @@
 ✅ Navigation mellan sektioner fungerar  
 ✅ Utloggning återställer till "To play Sudoku, sign in"
 <div align="center">
+<img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
+</div>
+
+<div align="center">
   <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
 </div>
 
@@ -43,9 +47,7 @@ cy.get('#facit').should('have.class', 'active');
 </div>
 
 
-<div align="center">
-<img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
-</div>
+
 
 <br/>
 
