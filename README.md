@@ -1,12 +1,17 @@
-na## Tester i Cypress
+Automatiserade tester av min Sudoku-applikation
+Det här projektet visar hur jag testat en webbaserad Sudoku-applikation med Cypress
+Applikationen är tillgänglig här
+➡️ https://a22robko.github.io/Sudoku/
 
-✅ Felaktig registrering (ogiltig e-post – input blir röd)  
-✅ Felaktig inloggning visar alert ("Incorrect Login")  
-✅ Korrekt inloggning ger tillgång till spelet  
-✅ Sudoku-spel går att interagera med (skriva in siffror)  
-✅ Facit-knapp visar korrekt sektion  
-✅ Navigation mellan sektioner fungerar  
-✅ Utloggning återställer till "To play Sudoku, sign in"
+Testerna kontrollerar att följande fungerar som det ska
+Felaktig registrering där ogiltig e-post gör input-fältet rött
+Felaktig inloggning triggar ett alert-meddelande med texten Incorrect Login
+Korrekt inloggning ger tillgång till spelet
+Det går att fylla i siffror i spelets tomma rutor
+Facit-knappen visar rätt lösning och byter sektion
+Navigering mellan sidor (Home, Sign In, Log In) fungerar
+Utloggning återställer allt och visar To play Sudoku, sign in
+Testerna använder cy.get(), .type(), .click(), .submit() och cy.window() för att interagera med sidan och verifiera funktionalitet via DOM och localStorage
 
 Testet börjar med att kontrollera hur sidan hanterar felaktig inloggning.
 Cypress använder cy.get() och .type() för att fylla i felaktiga uppgifter i formuläret, och .submit() för att skicka formuläret.
