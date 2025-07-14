@@ -17,7 +17,7 @@ Efter cy.reload() laddas sidan om, och användaren kan logga in.
 <div align="center">
 <img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
 </div>
-
+När användaren klickar på länken Sign In i toppmenyn, används Cypress-kommandot cy.contains(...).click() för att simulera ett klick. Det här testet verifierar att sidan navigerar korrekt till inloggningsvyn.  cy.contains('Sign In') letar upp knappen eller länken med exakt den texten. .click() klickar på den för att visa rätt vy. I det här fallet leder klicket till en ruta som säger "Welcome to Sudoku", vilket innebär att cy.get() och click() fungerat som förväntat.
 <div align="center">
   <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
 </div>
