@@ -49,7 +49,7 @@ Cypress lyssnar på window:alert och kontrollerar att meddelandet innehåller ex
 
 <div align="center"> <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" /> </div>
 
-###🧪 Sign in sidan 
+### 🧪 Sign in sidan 
 
 `cy.on('window:alert', (msg) => { ... })` lyssnar efter om ett alert-meddelande visas.
 `expect(msg).to.include('Incorrect Login')` kontrollerar att meddelandet innehåller exakt texten "Incorrect Login".
@@ -59,7 +59,7 @@ Detta visar att du kan hantera alert-dialoger och verifiera meddelanden som visa
 <div align="center"> <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" /> </div>
 
 <br/>
-🔄 Navigering och interaktion
+### 🔄 Navigering och interaktion
 Testet använder `cy.contains('Sign In').click()` för att öppna inloggningsrutan.
 Formulärfälten fylls i med `cy.get('#loginEmail').type(...)` och `cy.get('#loginPassword').type(...)`, och skickas sedan med `.submit()` istället för att klicka på en knapp.
 Metoden `.clear()` används för att tömma fält innan ny data skrivs in.
