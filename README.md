@@ -1,7 +1,7 @@
 # Automatiserade tester av min Sudoku-applikation
 
 Det här projektet visar hur jag testat en webbaserad Sudoku webbsida med Cypress  
-🔗 Live: [https://a22robko.github.io/Sudoku/](https://a22robko.github.io/Sudoku/)
+Live: [https://a22robko.github.io/Sudoku/](https://a22robko.github.io/Sudoku/)
 
 ---
 
