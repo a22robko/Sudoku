@@ -22,6 +22,10 @@ js
 Copy
 Edit
 
+<div align="center">
+  <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
+</div>
+
 // Testar att spela Sudoku och visa facit
 cy.get('[onclick="navigate(\'sudoku\')"]').click();
 cy.get('#sudoku').should('have.class', 'active');
@@ -29,9 +33,7 @@ cy.get('#sudoku').should('have.class', 'active');
 cy.get('input.sudoku-cell:not(.prefilled):not([disabled])').eq(0).click().type('4');
 cy.contains('Facit').click();
 cy.get('#facit').should('have.class', 'active');
-<div align="center">
-  <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
-</div>
+
 <div align="center">
   <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
 </div>
