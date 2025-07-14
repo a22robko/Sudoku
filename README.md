@@ -41,7 +41,8 @@ Därefter används `cy.reload()` för att ladda om sidan så att användaren aut
 
 <br/>
 
-⚠️ Test av felaktig inloggning med alert och formulärinlämning
+
+### ⚠️ Test av felaktig inloggning med alert och formulärinlämning
 Det här testet kontrollerar att ett alert-meddelande visas när en användare försöker logga in med felaktiga uppgifter.
 Cypress lyssnar på window:alert och kontrollerar att meddelandet innehåller exakt texten "Incorrect Login". Formuläret skickas direkt med `.submit()` – utan att klicka på någon knapp.
 
