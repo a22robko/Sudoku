@@ -7,6 +7,10 @@
 ✅ Facit-knapp visar korrekt sektion  
 ✅ Navigation mellan sektioner fungerar  
 ✅ Utloggning återställer till "To play Sudoku, sign in"
+
+Testet börjar med att försöka logga in med fel e-post och lösenord, för att kontrollera att systemet visar ett alert-meddelande med texten "Incorrect Login".
+Därefter skapas en korrekt testanvändare direkt i localStorage med cy.window().then(...) – för att komma åt window.localStorage setItem(...) – för att spara användaren JSON.stringify(...) – för att omvandla användardata till sträng 
+Efter cy.reload() laddas sidan om, och testet fortsätter genom att logga in med rätt uppgifter och kontrollera att spelet visas korre
 <div align="center">
 <img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
 </div>
