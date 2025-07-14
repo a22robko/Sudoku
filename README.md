@@ -48,7 +48,7 @@ Det här testet kontrollerar att ett `alert`-meddelande visas när en användare
 
 <div align="center"> <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" /> </div>
 
-### 🧪 Sign in sidan 
+### Sign in sidan 
 
 `cy.on('window:alert', (msg) => { ... })` lyssnar efter om ett alert-meddelande visas.
 `expect(msg).to.include('Incorrect Login')` kontrollerar att meddelandet innehåller exakt texten "Incorrect Login".
