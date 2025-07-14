@@ -44,10 +44,15 @@ cy.get('#facit').should('have.class', 'active');
 <img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
 </div>
 
-⚠️ Test av felaktig inloggning med alert och formulärinlämning
-Det här testet kontrollerar att ett alert-meddelande visas när en användare försöker logga in med felaktiga uppgifter.
-Cypress lyssnar på window:alert och verifierar att meddelandet innehåller texten "Incorrect Login".
+<br/>
 
-Formuläret skickas direkt med .submit(), utan att klicka på en knapp – vilket visar att du förstår hur formulär fungerar bakom kulisserna i DOM:en.
+### ⚠️ Test av felaktig inloggning med alert och formulärinlämning
 
-<div align="center"> <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" /> </div>
+Det här testet kontrollerar att ett `alert`-meddelande visas när en användare försöker logga in med felaktiga uppgifter.  
+Cypress lyssnar på `window:alert` och verifierar att meddelandet innehåller texten **"Incorrect Login"**.
+
+Formuläret skickas direkt med `.submit()`, utan att klicka på en knapp – vilket visar att du förstår hur formulär fungerar bakom kulisserna i DOM:en.
+
+<div align="center">
+  <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" />
+</div>-1d27b0bfc0ee" /> </div>
