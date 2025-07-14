@@ -36,12 +36,11 @@ Därefter används `cy.reload()` för att ladda om sidan så att användaren aut
   <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
 </div>
 
-### Test av felaktig inloggning med alert och formulärinlämning
+⚠️ Test av felaktig inloggning med alert och formulärinlämning
+Det här testet kontrollerar att ett alert-meddelande visas när en användare försöker logga in med felaktiga uppgifter.
+Cypress lyssnar på window:alert och kontrollerar att meddelandet innehåller exakt texten "Incorrect Login".
 
-Det här testet kontrollerar att ett `alert`-meddelande visas när en användare försöker logga in med felaktiga uppgifter.  
-Cypress lyssnar på `window:alert` och verifierar att meddelandet innehåller texten **"Incorrect Login"**.
-
-Formuläret skickas direkt med `.submit()`, utan att klicka på en knapp – vilket visar att du förstår hur formulär fungerar bakom kulisserna i DOM:en.
+Formuläret skickas direkt med .submit() – utan att klicka på någon knapp.
 
 <div align="center">
   <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" />
