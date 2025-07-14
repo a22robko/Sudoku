@@ -29,6 +29,11 @@ js
 Copy
 Edit
 
+
+<div align="center">
+  <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" />
+</div>
+
 <div align="center">
   <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
 </div>
@@ -41,10 +46,6 @@ cy.get('input.sudoku-cell:not(.prefilled):not([disabled])').eq(0).click().type('
 cy.contains('Facit').click();
 cy.get('#facit').should('have.class', 'active');
 
-
-<div align="center">
-  <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" />
-</div>
 
 
 
