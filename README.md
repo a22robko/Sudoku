@@ -34,10 +34,10 @@ För att simulera en lyckad inloggning används `cy.window().then(...)` för att
 Därefter används `cy.reload()` för att ladda om sidan så att användaren automatiskt loggas in.
 <div align="center">
   <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
-</div>
+</div>⚠️ Test av felaktig inloggning med alert och formulärinlämning
+Det här testet kontrollerar att ett alert-meddelande visas när en användare försöker logga in med felaktiga uppgifter. Cypress lyssnar på window:alert och kontrollerar att meddelandet innehåller exakt texten "Incorrect Login".
 
-⚠️ Test av felaktig inloggning med alert och formulärinlämning
-Det här testet kontrollerar att ett alert-meddelande visas när en användare försöker logga in med felaktiga uppgifter. Cypress lyssnar på window:alert och kontrollerar att meddelandet innehåller exakt texten "Incorrect Login". Formuläret skickas direkt med .submit() – utan att klicka på någon knapp.
+Formuläret skickas direkt med .submit() – utan att klicka på någon knapp.
 
 <div align="center">
   <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" />
