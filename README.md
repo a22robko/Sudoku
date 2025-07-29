@@ -24,13 +24,5 @@ Both the website and all Cypress tests are fully published to GitHub.
 - Navigation between pages (Home, Sign In, Game, etc.) is fully tested  
 - Logging out resets the app and shows *"To play Sudoku, sign in"*
 
-<br/>
-
-
-För att kontrollera skriv då npx playwright show-report
-<img width="2154" height="547" alt="image" src="https://github.com/user-attachments/assets/ff2543b4-84f9-449b-ac6c-57e789e0bb70" />
-
-
-man kan se dem här med <img width="590" height="401" alt="image" src="https://github.com/user-attachments/assets/bc9b35c1-8c5c-400a-b1d1-53c507fcca35" />
 
 
