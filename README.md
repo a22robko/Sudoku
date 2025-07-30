@@ -1,4 +1,4 @@
-# Sudoku Web Application – Cypress Test Suite
+# Sudoku Web/Cypress Test 
 
 This project demonstrates automated end-to-end testing of a fully functional **Sudoku web application** using **Cypress**.  
 The application supports:
