@@ -33,13 +33,8 @@ The Sudoku cells are automatically filled, and the **"Facit"** button is used to
 ---
 
 ### 🧪 CLI Report During Live Test
+This screenshot shows what the **live terminal output** looks like when running the test with Playwright.
 
 <img width="567" height="1491" alt="Playwright CLI full report" src="https://github.com/user-attachments/assets/3aded63e-1f09-4d54-af42-6dfdbdff06e0" />
 
-This screenshot shows what the **live terminal output** looks like when running the test with Playwright.  
-You can follow each step in real-time, including:
-- 🕒 Start time and total duration  
-- 📂 Test file being executed  
-- 🌐 Browser used (e.g., Chromium)  
-- ✅ Pass/fail status  
-- 📊 Report generation via `blob-report`
+
