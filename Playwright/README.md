@@ -1,4 +1,13 @@
-Here is a complete step-by-step overview of the test execution using **Playwright**.
+# 🧪 Playwright UI Testing – Sudoku Web App
+
+This project demonstrates how to use [Playwright](https://playwright.dev/) for end-to-end testing of a JavaScript-based Sudoku web application.  
+The test script simulates a complete user journey:
+
+- ❌ Register with invalid input  
+- 🔐 Log in  
+- 🎮 Play Sudoku  
+- ✅ Show correct solution  
+- 🚪 Log out  
 
 ---
 
