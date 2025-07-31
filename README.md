@@ -1,11 +1,11 @@
-# Sudoku Web/Cypress Test 
+# 🧪 Sudoku Testning
 
-This project demonstrates automated end-to-end testing of a fully functional **Sudoku web application** using **Cypress**.  
+This project demonstrates automated end-to-end testing of a fully functional **Sudoku web application** using **Cypress** and **Playwright**.  
 The application supports:
 
-- User Sign Up and Login
-- Interactive Sudoku gameplay
-- A "Facit" button that displays the correct Sudoku solution
+- User Sign Up and Login  
+- Interactive Sudoku gameplay  
+- A "Facit" button that displays the correct Sudoku solution  
 
 🔗 Live Website: [https://a22robko.github.io/Sudoku/](https://a22robko.github.io/Sudoku/)
 
@@ -13,9 +13,9 @@ The application supports:
 
 ## 🛠 Tools & Technologies
 
-- **Frontend**: HTML, CSS, JavaScript (Vanilla)
-- **Testing**: Cypress (JavaScript-based E2E test framework)
-- **Environment**: Node.js (only used to run Cypress locally)
+- **Frontend**: HTML, CSS, JavaScript (Vanilla)  
+- **Testing**: Cypress & Playwright (JavaScript-based E2E frameworks)  
+- **Environment**: Node.js (used to run test tools locally)
 
 ---
 
