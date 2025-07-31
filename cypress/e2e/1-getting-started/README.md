@@ -1,56 +1,81 @@
+## 🔐 Cypress Login and Game Interaction Tests
 
-### Invalid Login Test
+This section documents how Cypress is used to test login functionality, error handling, and game interaction for the Sudoku web application.
 
-This test checks how the app handles login attempts with incorrect credentials.  
-Cypress uses `.get()` and `.type()` to enter input, and `.submit()` to send the form.  
-`cy.on('window:alert')` listens for an alert with the message `"Incorrect Login"`.
+---
+
+### ❌ Invalid Login Test
+
+This test checks how the app handles login attempts with incorrect credentials.
+
+- `cy.get()` and `cy.type()` are used to input login data.
+- `.submit()` is called on the form directly (instead of clicking a button).
+- `cy.on('window:alert')` listens for an alert and verifies that it shows the message `"Incorrect Login"`.
+
 <div align="center">
-<img width="500" height="974" alt="image" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
+  <img width="500" height="974" alt="Invalid login test" src="https://github.com/user-attachments/assets/4cd6f2ca-421e-48e4-afee-9b14b8f5a64f" />
 </div>
 
-<br/>
+---
 
-### To simulate a successful login, 
+### ✅ Simulating a Successful Login
 
-Cypress uses `cy.window().then(...)` to store user data in `localStorage` using `setItem()` and `JSON.stringify()`.  
-Then, `cy.reload()` is called to reload the page and automatically log the user in.
-'
+To simulate a valid login:
+
+- Cypress uses `cy.window().then(...)` to store user data in `localStorage` using `setItem()` and `JSON.stringify()`.
+- The page is reloaded using `cy.reload()`, triggering automatic login via stored data.
+
 <div align="center">
-  <img width="600" height="573" alt="image" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
+  <img width="600" height="573" alt="Successful login simulation" src="https://github.com/user-attachments/assets/98d7c719-af38-4db6-af3d-e62d6c30a4ed" />
 </div>
 
+---
 
-<br/>
+### ⚠️ Invalid Login – Alert Verification
 
+This test ensures that an alert appears when incorrect credentials are used, and the form is submitted programmatically.
 
-### Invalid Login with Alert and Form Submission
+- Listens to the `window:alert` event using `cy.on(...)`.
+- Verifies the message text using `expect(msg).to.include('Incorrect Login')`.
+- Submits the form directly with `cy.get('#login form').submit()`.
 
-This test verifies that an `alert` message appears when a user attempts to log in with incorrect credentials.  
-Cypress listens to the `window:alert` event and checks that the message contains the exact text `"Incorrect Login"`.  
-The form is submitted directly using `.submit()` without clicking any button.
+<div align="center">
+  <img width="500" height="227" alt="Alert message test" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" />
+</div>
 
-<div align="center"> <img width="500" height="227" alt="image" src="https://github.com/user-attachments/assets/02894862-0bc0-41c2-b16e-1d27b0bfc0ee" /> </div>
+---
 
-### Sign In Form Behavior
+### 🧪 Sign In Form Behavior
 
-`cy.on('window:alert', (msg) => { ... })` listens for any alert messages triggered by the browser.  
-`expect(msg).to.include('Incorrect Login')` verifies that the alert contains the exact message `"Incorrect Login"`.  
-The form is submitted directly using `cy.get('#login form').submit()` — without clicking a button.
+This test demonstrates how Cypress handles alert dialogs and validates error messages.
 
-This test demonstrates how Cypress can handle alert dialogs and validate error messages shown to the user.
+- `cy.on('window:alert', (msg) => { ... })` listens for browser alerts.
+- `expect(msg).to.include('Incorrect Login')` confirms the correct error message is shown.
+- Login form is submitted without pressing a button, using `cy.get('#login form').submit()`.
 
-<div align="center"> <img width="600" height="746" alt="image" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" /> </div>
+<div align="center">
+  <img width="600" height="746" alt="Sign in alert behavior" src="https://github.com/user-attachments/assets/fadcd31d-0c3f-4d68-9ea4-59219c7924fc" />
+</div>
 
-<br/>
+---
 
-### Navigation and Game Interaction
+### 🧭 Navigation and Game Interaction
 
-The test uses `cy.contains('Sign In').click()` to open the login form.  
-The form fields are filled in using `cy.get('#loginEmail').type(...)` and `cy.get('#loginPassword').type(...)`, and submitted with `.submit()` instead of clicking a button.  
-The `.clear()` method is used to empty the fields before entering new data.
+This test verifies the full user journey after login, including game interaction.
 
-Once the game is displayed, interaction is tested by clicking on cells and typing numbers using `.click().type('4')`.  
-Clicking the **"Facit"** button is verified with `cy.contains('Facit').click()`.  
-All page switches (section navigation) are tested using `.click()` to ensure correct behavior across the app.
+- Login form is accessed via `cy.contains('Sign In').click()`.
+- Email and password are entered using `cy.get('#loginEmail')` and `cy.get('#loginPassword')`.
+- Fields are cleared with `.clear()` before typing new data.
+- Form is submitted using `.submit()`.
 
-<div align="center"> <img width="500" height="761" alt="image" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" /> </div>
+**Gameplay interactions:**
+
+- Cells are clicked and numbers entered using `.click().type('4')`.
+- Clicking the **"Facit"** button is verified with `cy.contains('Facit').click()`.
+- Section navigation is tested by clicking buttons and checking that views change correctly.
+
+<div align="center">
+  <img width="500" height="761" alt="Navigation and game interaction" src="https://github.com/user-attachments/assets/2e87efab-13aa-42e0-a1c1-1a571670268e" />
+</div>
+
+---
